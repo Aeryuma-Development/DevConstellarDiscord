@@ -67,8 +67,7 @@ class ConstellarExtension {
       /*=================
       API Get
       ===================*/
-
-
+      const passcode = tokenApi
       try {
         axios.get('http://AeryumaNoriyomi.nekokawaikanaka.repl.co').then(x => {
           console.log('[INFO] API Connected (JsonObjAPI)...')
