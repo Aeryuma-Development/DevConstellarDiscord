@@ -15,7 +15,7 @@ class ConstellarExtension {
   open(client, tokenApi, mongoLink) {
     try {
       const axios = require("axios");
-      
+
       if (!client) {
         throw 'Client Tidak Ditemukan'
       } else if (!tokenApi) {
@@ -256,11 +256,11 @@ class ConstellarExtension {
       `[ERROR] Eror Terdeteksi Kak : ${err}`
     }
   }
+}
 
-  get(url) {
-    var axios = require('axios')
-    return axios.get(url).then(x => x.data)
-  }
+function get(url) {
+  var axios = require('axios')
+  return axios.get(url).then(x => x.data)
 }
 
 //Module Exports
@@ -268,5 +268,6 @@ module.exports = {
   Client: ConstellarExtension,
   version: version,
   sector: sector,
-  dev: oniichan
+  dev: oniichan,
+  get: get
 }
